@@ -19,5 +19,16 @@ public class Member(string firstName, string lastName)
     {
         IsActive = !IsActive;
     }
-    public void GetRentedPubs() { }
+    public void GetRentedPubs()
+    {
+        Console.WriteLine($"All the publications rented by the member:\n");
+        foreach (IRentable item in RentedObjects)
+        {
+            Console.WriteLine($"{item.GetType().Name}:");
+            if (item is Publication publication)
+            {
+                Console.WriteLine($"{publication.Title}");
+            }
+        }
+    }
 }

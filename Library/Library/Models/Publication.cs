@@ -21,6 +21,7 @@ public abstract class Publication(string author, string title, string publisher)
     {
         Available = false;
         LastUpdate = DateTime.Now;
+        member.RentedObjects.Add(this);
         Console.WriteLine($"{GetType().Name} '{Title}' rented by {member.FirstName} {member.LastName}");
     }
     public void Return(Member member)

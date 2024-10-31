@@ -27,9 +27,11 @@ else {
     Console.WriteLine("The journal is now NOT available"); 
 }
 
-
-
+Console.WriteLine("Returning the textbook");
 textbook.Return(member);
+
+member.GetRentedPubs();
+
 
 
 
