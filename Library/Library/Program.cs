@@ -32,6 +32,11 @@ textbook.Return(member);
 
 member.GetRentedPubs();
 
+Console.WriteLine($"Member status before toggling-> Active: {member.IsActive}");
+member.ToggleActive();
+Console.WriteLine($"Member status before toggling-> Active: {member.IsActive}");
+
+
 
 
 
